@@ -1,0 +1,488 @@
+*{
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  text-align: center;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.container{
+  margin: 0 60px 0;
+}
+
+h1{
+  font-size: 50px;
+}
+
+h2{
+  font-size: 30px;
+}
+
+h3{
+  font-size: 25px;
+  font-style: oblique;
+  font-weight: lighter;
+}
+
+h3 a{
+  color: rgb(236, 86, 86);
+}
+
+h4{
+  font-size: 20px;
+  color: #7c7c7c;
+}
+
+h5{
+  font-size: 15px;
+}
+
+h6{
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+p{
+  line-height: 200%;
+}
+/* ----------Responsive for col ----------- */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+/* IMAGE */
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    background: rgb(231, 226, 226);
+    width: 100%;
+    box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.18);
+  }
+  
+  .nav-menu {
+    float: right;
+    line-height: 32px;
+    margin-bottom: 0;
+    padding-top: 16px;
+  }
+  
+  nav ul li {
+    float: left;
+    margin-right: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin-left: 40px;
+  }
+  
+  nav ul li a {
+    padding: 2px 0 0 0;
+    position: relative;
+    display: block;
+    font-size: 16px;
+    color: #000000;
+    font-family: 'Poppins', helvetica;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover, nav ul li a.active, nav ul li a:focus {
+    color: rgb(236, 86, 86);
+    text-decoration: underline;
+  }
+
+.logo {
+    float: left;
+    color: black;
+}
+
+.logo img{
+    width: 100px;
+    height: 100%;
+}
+
+.active {
+  color: #afafaf;
+}
+
+.nav-menu .nav-icon{
+  display: none;
+}
+
+.toggle-menu{
+  display:none;
+}
+
+/* NAVBAR COLLAPSED */
+@media only screen and (max-width: 768px) {
+  /* For tablets or phones: */
+  .nav-menu a {display: none;}
+
+  nav ul li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-menu .nav-icon{
+    float: right;
+    display: block;
+  }
+
+  .toggle-menu a {
+    float: none;
+    display: block;
+    text-align: right;
+    padding-right: 60px;
+    padding-bottom: 15px;
+    color: black;
+    text-decoration: none;
+  }
+
+  .toggle-menu a:hover{
+    color: rgb(236, 86, 86);
+    text-decoration: underline;
+  }
+}
+
+  /* Banner */
+#banner {
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    background-color: #111111;
+    color: rgba(255, 255, 255, 0.5);
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("picture/banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 0;
+    display: -ms-flexbox;
+    height: 35rem !important;
+    min-height: 35rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%; }
+
+
+
+header.product-list {
+    text-align: center;
+    margin-bottom: 4rem; 
+}
+
+header.product-list p {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.card {
+    width: 100%;
+    margin: 2.5rem 0;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -moz-align-items: -moz-stretch;
+    -webkit-align-items: -webkit-stretch;
+    -ms-align-items: -ms-stretch;
+    align-items: stretch;
+   }
+
+  .card a{
+    text-decoration: none;
+    font-style: normal;
+  }
+
+  .card a:hover{
+    text-decoration: underline;
+    font-style: oblique;
+  }
+
+  
+
+  .thumbnail {
+    padding: 10px;
+    transition: transform .2s; /* Animation */
+    margin: 0 auto;
+  }
+
+  .thumbnail:hover {
+    transform: scale(1.2);
+}
+
+
+/* FOOTER */
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  background-color: #343434;
+  color: whitesmoke;
+  text-align: left;
+  padding: 10px 10px 0px 10px;
+
+  background: #16222A; 
+  background: -webkit-linear-gradient(59deg, #3A6073, #16222A); 
+  background: linear-gradient(59deg, #3A6073, #16222A);
+  color: whitesmoke;
+  position: relative;
+}
+
+footer a{
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+footer .field a:hover{
+  color: rgb(236, 86, 86);
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  footer .field{
+    padding: 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  footer .field{
+    padding: 0px 0px 0px 60px;
+  }
+}
+
+/* PROFILE */
+.profile{
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px 10px 0px 10px;
+  margin-bottom: 25px;
+}
+
+.profile img{
+  height: 300px;
+}
+
+.info{
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.info a{
+  color: grey;
+  text-decoration: none;
+}
+
+.info a:hover {
+  color: rgb(236, 86, 86);
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For tablets or phones: */
+  .profile h3{
+    font-size: 20px;
+  }
+  
+  .profile h4{
+    font-size: 18px;
+  }
+
+  .profile a{
+    font-size: 14px;
+  }
+}
+
+/* ABOUT-US */
+.about-us{
+  padding: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .about-us img{
+    width: 60%;
+    height: auto;
+    float: left;
+    margin-right: 15px;
+  }
+}
+
+/*PRODUCT*/
+.product {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  padding-bottom: 400px;
+  padding-top: 100px;
+}
+.grid {       
+  padding: 1rem;
+  height: 4rem;
+}
+
+@media (min-width: 400px) {
+  .product { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .product { grid-template-columns: repeat(2, 1fr); }
+}
+
+.right{
+    text-align: left;
+}
+
+.button {
+  background-color: rgb(236, 86, 86);
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; 
+}
+
+/* Confirmation Style */
+.confirmation{
+  padding: 80px 50px 0px 50px;
+}
+
+.confirmation h2{
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.confirmation h3{
+  color: #e74c3c;
+}
+
+.confirmation h6{
+  font-size: 17px;
+  color: #7c7c7c;
+}
+
+.confirmation [class*="col-"] {
+  padding: 0;
+}
+
+.confirmation .row{
+  padding: 0px;
+}
+
+.confirmation .body{
+  text-align: left;
+}
+
+.confirmation .end {
+  padding-bottom: 25px;
+}
+
+.confirmation .button {
+  background-color: #e74c3c; /* Green */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10px;
+}
+
+
+/* Get info button */
+#zipcode-button {
+  width: 12rem;
+  height: 3rem;
+  border-radius: 15px;
+  line-height: 3;
+  background: #185901;
+  display: block;
+  text-align: center;
+  font-size: 10pt;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.25rem;
+  margin: 2rem auto;
+  cursor: pointer;
+}
+
+#zipcode-error{
+  color: red;
+}
