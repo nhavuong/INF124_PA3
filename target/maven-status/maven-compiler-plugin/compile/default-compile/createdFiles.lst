@@ -1,0 +1,10 @@
+UpdateDatabase.class
+TaxData.class
+LoadDataServlet.class
+com\mycompany\mavenproject2\JAXRSConfiguration.class
+Confirmation.class
+TrackingServlet.class
+Form.class
+com\mycompany\mavenproject2\resources\JavaEE8Resource.class
+LoadshoppingcartServlet.class
+AddCartServlet.class

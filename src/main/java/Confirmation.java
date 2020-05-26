@@ -27,7 +27,7 @@ public class Confirmation extends HttpServlet {
         PrintWriter out = response.getWriter();
         
         
-        out.println("Hello from AnotherServlet");
+//        out.println("Hello from AnotherServlet");
         
         // Write the response message, in an HTML page
         try {
@@ -35,10 +35,10 @@ public class Confirmation extends HttpServlet {
             String phoneNumber = "";
             String address = "";
             String method = "";
-            String item = "";
-            float price = 0;
+            //String item = "";
+            //float price = 0;
             int quantity = 0;
-            float subtotal = 0;
+            //float subtotal = 0;
             String shipping = "";
             float tax = 0;
             float total = 0;
@@ -54,7 +54,7 @@ public class Confirmation extends HttpServlet {
             
             int ID = (int) request.getAttribute("ID");
             
-            String query = "SELECT * FROM jnah_shop.cloth, jnah_shop.order WHERE jnah_shop.order.OrderID=? AND jnah_shop.cloth.id=jnah_shop.order.ClothID";
+            String query = "SELECT * FROM jnah_shop.cloth, jnah_shop.order WHERE jnah_shop.order.OrderID=?";
             PreparedStatement pre = dbcon.prepareStatement(query);
             pre.setInt(1, ID);
             ResultSet rs = pre.executeQuery();
@@ -64,10 +64,10 @@ public class Confirmation extends HttpServlet {
                 phoneNumber = rs.getString("PhoneNumber");
                 address = rs.getString("ShippingAddress")+ ", " + rs.getString("City") + ", " + rs.getString("State") + " " + rs.getString("Zipcode");
                 method = rs.getString("ShippingMethod");
-                item = rs.getString("name");
-                price = rs.getFloat("price");
+                //item = rs.getString("name");
+                //price = rs.getFloat("price");
                 quantity = Integer.parseInt(rs.getString("Quantity"));
-                subtotal = price * quantity;
+                //subtotal = price * quantity;
                 if (method.equals("6 Days Ground")){
                   shipping = "5";
                 }
@@ -159,15 +159,16 @@ public class Confirmation extends HttpServlet {
                         "                    <div class=\"col-12\">\n" +
                         "                        <h3> Order Summary </h3> \n" +
                         "                    </div>\n" +
+//                        "                    <div class=\"col-6\">\n" +
+//                        "                        <h4> Item Ordered </h4>\n" +
+//                        "                        <h5> Item: <span id=\"item\">"+ item +"</span></h5>\n" +
+//                        "                        <h5> Price: <span id=\"price\">"+ price +"</span></h5>\n" +
+//                        "                        <h5> Total Quantity: <span id=\"quantity\">"+ quantity +"</span></h5>\n" +
+//                        "                    </div>     \n" +
                         "                    <div class=\"col-6\">\n" +
-                        "                        <h4> Item Ordered </h4>\n" +
-                        "                        <h5> Item: <span id=\"item\">"+ item +"</span></h5>\n" +
-                        "                        <h5> Price: <span id=\"price\">"+ price +"</span></h5>\n" +
+//                        "                        <h4> Receipt Information </h4>\n" +
                         "                        <h5> Total Quantity: <span id=\"quantity\">"+ quantity +"</span></h5>\n" +
-                        "                    </div>     \n" +
-                        "                    <div class=\"col-6\">\n" +
-                        "                        <h4> Receipt Information </h4>\n" +
-                        "                        <h5> Subtotal: $<span id=\"subtotal\">"+ subtotal +"</span></h5>\n" +
+//                        "                        <h5> Subtotal: $<span id=\"subtotal\">"+ subtotal +"</span></h5>\n" +
                         "                        <h5> Shipping: $<span id=\"shipping\">" + shipping +"</span></h5>\n" +
                         "                        <h5> Tax: $<span id=\"tax\">"+ tax +"</span></h5>\n" +
                         "                        <h5> Total: $<span id=\"total\">"+ total +"</span></h5>\n" +
