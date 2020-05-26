@@ -195,10 +195,11 @@
       var xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function (){
         if (this.readyState == 4 && this.status == 200) {
-          orderID = xhr.responseText;
+          console.log(xhr.responseText);
+              orderID = xhr.responseText;
           console.log(orderID)
           localStorage.setItem('orderID', JSON.stringify({OrderID:orderID }));
-          window.location.href = "confirmation.html";       
+          //window.location.href = "confirmation.html";       
         }         
       }
       xhr.open("POST", "form-customerInfo.php",true);

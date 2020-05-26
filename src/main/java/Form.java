@@ -163,7 +163,7 @@ public class Form extends HttpServlet {
                             "                        <div class=\"col-12 form-control\">\n" +
                             "                            <label>Shipping Method</label>\n" +
                             "                            <div class=\"option\">\n" +
-                            "                                <select id=\"option\" class=\"shipping-option\" onchange=\"getShippingPrice()\">\n" +
+                            "                                <select id=\"option\" class=\"shipping-option\" name=\"shippingvalue\" onchange=\"getShippingPrice()\">\n" +
                             "                                    <option value=\"5\">6 Days Ground - $5</option>\n" +
                             "                                    <option value=\"10\">2 Days Expedited - $10</option>\n" +
                             "                                    <option value=\"30\">Overnight - $30</option>\n" +

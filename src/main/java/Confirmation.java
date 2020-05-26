@@ -26,6 +26,9 @@ public class Confirmation extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         
+        
+        out.println("Hello from AnotherServlet");
+        
         // Write the response message, in an HTML page
         try {
             String customerName ="";
@@ -49,7 +52,7 @@ public class Confirmation extends HttpServlet {
             Class.forName("com.mysql.jdbc.Driver");
             Connection dbcon = DriverManager.getConnection(URL, USER, PASSWORD);
             
-            int ID = 33;
+            int ID = (int) request.getAttribute("ID");
             
             String query = "SELECT * FROM jnah_shop.cloth, jnah_shop.order WHERE jnah_shop.order.OrderID=? AND jnah_shop.cloth.id=jnah_shop.order.ClothID";
             PreparedStatement pre = dbcon.prepareStatement(query);
